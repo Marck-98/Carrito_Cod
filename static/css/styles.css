@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+h1, h2 {
+    text-align: center;
+    color: #000;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cruzeta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.cruzeta img {
+    width: 100px; /* Ajustar según el tamaño deseado */
+    height: 100px; /* Ajustar según el tamaño deseado */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cruzeta img:hover {
+    transform: scale(1.1);
+}
+
+.cruzeta img:hover {
+    opacity: 0.8; /* Cambia la opacidad al pasar el mouse */
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+    transition: transform 0.3s, opacity 0.3s; /* Transición suave */
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid #000000;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #16adcc;
+    color: white;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Vehículo IoT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Control de Vehículo IoT</h1>
+
+    <div class="cruzeta">
+        <img id="curvaIzquierda" src="{{ url_for('static', filename='img/flechaIzquierda.png') }}" alt="Curva Izquierda" onclick="enviarAccion('curvaIzquierda')"/>
+        <img id="avanzar" src="{{ url_for('static', filename='img/flecha-hacia-arriba.png') }}" alt="Avanzar" onclick="enviarAccion('avanzar')" />
+        <img id="curvaDerecha" src="{{ url_for('static', filename='img/flecha-derecha.png') }}" alt="Curva Derecha" onclick="enviarAccion('curvaDerecha')" />
+        <img id="girarIzquierda" src="{{ url_for('static', filename='img/flecha-hacia-izquierda.png') }}" alt="Girar Izquierda" onclick="enviarAccion('girarIzquierda')" />
+        <img id="detener" src="{{ url_for('static', filename='img/stop.png') }}" alt="Detener" onclick="enviarAccion('detener')" />
+        <img id="girarDerecha" src="{{ url_for('static', filename='img/flecha-hacia-derecha.png') }}" alt="Girar Derecha" onclick="enviarAccion('girarDerecha')" />
+        <!--  <img id="rutina" src="{{ url_for('static', filename='img/flechaIzquierda.png') }}" onclick="enviarAccion('rutina')" /> -->
+        <img id="retroceder" src="{{ url_for('static', filename='img/flecha-hacia-atras.png') }}" alt="Retroceder" onclick="enviarAccion('retroceder')" />
+        <!--  <img id="obstaculos" src="{{ url_for('static', filename='img/flechaIzquierda.png') }}" alt="Obstáculos" onclick="enviarAccion('obstaculos')" /> -->
+    </div>
+    
+
+    <h2>Último Registro de Acción</h2>
+    <table id="tablaUltimoRegistro">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>ID Device</th>
+                <th>Acción</th>
+                <th>Status</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se insertará la última fila obtenida de la BD -->
+        </tbody>
+    </table>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
